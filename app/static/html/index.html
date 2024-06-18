@@ -27,16 +27,7 @@
             <img class="logo" src="/static/img/logo.png" alt="Logo">
         </a>   
     </div>
-    <div class="container">     
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul class="flashes">
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
+    <div class="container">
         <div class="button-container">
             <a href="{{ url_for('armory') }}" class="button">Armory</a>
             <a href="{{ url_for('register') }}" class="button">Register</a>

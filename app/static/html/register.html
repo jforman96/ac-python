@@ -22,12 +22,12 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="logo-container"></div>
+    <div class="logo-container">
         <a href="{{ url_for('index') }}">
             <img class="logo" src="/static/img/logo.png" alt="Logo">
         </a>   
-    </div>      
-    <div class="container"></div> 
+    </div> 
+    <div class="container"> 
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul class="flashes">
@@ -44,6 +44,6 @@
             <button type="submit" class="button">Register</button>
         </form>
         <footer class="footer">{{ footer_text }}</footer>
-    </div>
+    </div> 
 </body>
 </html>
