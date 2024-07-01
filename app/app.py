@@ -11,7 +11,7 @@ password = os.getenv('PASSWORD', 'password')
 webproto = os.getenv('PROTO', 'http')
 api_url = os.getenv('API_URL', 'example.com')
 armory_url =  os.getenv('ARMORY_URL', 'example.com')
-download_link = os.getenv('DOWNLOAD_LINK', 'example.com')
+client_file = os.getenv('CLIENT_FILE', 'World of Warcraftt.tar.xz')
 
 api = AzerothCoreAPI(f'{webproto}://{username}:{password}@{api_url}')
 app = Flask(__name__)
@@ -58,7 +58,8 @@ def register():
 
 @app.route('/download', methods=['GET'])
 def download():
-    return redirect(download_link)
+    return Flask.send_from_directory('static/files', client_file, as_attachment=True)
+
 
 
 if __name__ == '__main__':
