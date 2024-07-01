@@ -66,6 +66,7 @@ body {
 
 fieldset {
     border: none;
+    align-items: center;
 }
 
 .button:hover {
