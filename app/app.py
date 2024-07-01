@@ -14,7 +14,7 @@ armory_url =  os.getenv('ARMORY_URL', 'example.com')
 download_link = os.getenv('DOWNLOAD_LINK', 'example.com')
 
 api = AzerothCoreAPI(f'{webproto}://{username}:{password}@{api_url}')
-app = Flask(__name__, template_folder='static/html')
+app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 

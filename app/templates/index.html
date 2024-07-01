@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="button-container">
+        <a href="{{ url_for('armory') }}" class="button">Armory</a>
+        <a href="{{ url_for('register') }}" class="button">Register</a>
+        <a href="{{ url_for('download') }}" class="button">Download Client</a>
+    </div>
+{% endblock %}
