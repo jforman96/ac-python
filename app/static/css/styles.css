@@ -27,9 +27,8 @@ header {
     background-color: rgba(230, 230, 230, 0.9);
     border-radius: 15px;
     max-width: 600px;
-    min-height: 300px;
     box-shadow: 0 0 9px white;
-    width: 90%;
+    width: 100%;
     padding: 50px 5%;
     margin: 0 auto;
     position: relative;

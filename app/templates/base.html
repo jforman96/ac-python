@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
@@ -23,14 +25,16 @@
 </head>
 <body>
     <header></header>
-    <div class="logo-container"></div>
+    <div class="logo-container">
         <a href="{{ url_for('index') }}">
-            <img class="logo" src="/static/img/logo.png" alt="Logo">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
         </a>   
     </div>
-    <div class="container">
+    <main class="container">
         {% block content %}{% endblock %}
-    </div>
-    <footer class="footer">{{ footer_text }}</footer>
+    </main>
+    <footer class="footer">
+        <p>🄯 {{ year }} {{ footer_text }}</p>
+    </footer>    
 </body>
 </html>
