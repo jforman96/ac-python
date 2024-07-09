@@ -26,7 +26,7 @@ header {
 .container {
     background-color: rgba(230, 230, 230, 0.9);
     border-radius: 15px;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 0 9px white;
     width: 100%;
     padding: 50px 5%;
