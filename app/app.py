@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, flash
 from api import AzerothCoreAPI
 import os
 

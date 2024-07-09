@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flashes">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+            <br>
+        {% endif %}
+    {% endwith %}
+
+
     <form method="POST">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
